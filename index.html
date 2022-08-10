@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+
+      function canVote(){
+        var age= document.getElementById("age").value;
+        console.log(age);
+      var msg=  age>=18 ? "you can Vote" : "you can't Vote";
+      console.log(msg);
+    }
+
+
+
+  function getDivision(){
+ var marks = document.getElementById("marks").value;
+
+ if ( marks >=75){
+    console.log('you got distinction')   
+ } 
+ else if ( marks>= 60){
+    console.log('you got 1st class')  
+ } 
+ else if( marks >= 45) {
+ console.log('you got 2nd class') 
+ }
+  else if(marks<=45){
+    console.log('clear the arraers')
+  }
+   else if (marks==null){
+    console.log('enter the marks')
+   }
+  }
+
+
+
+
+function getCountry(){
+
+var country = document.getElementById("country").value;
+
+switch (country){
+case "India": 
+console.log(" you are Indian")
+case "USA": 
+console.log(" you are American")
+default: 
+console.log("Enter Correct country")
+break;
+}
+}
+    </script>
+
+
+</head>
+<body>
+    <div>
+        <label for="age">Enter your gender
+    <input type="text" id="age" name="age" />
+
+</label>
+    <button onClick="canVote()">Can Vote</button>
+</div>
+ <div>  
+        <label for="marks">Enter your gender
+    <input type="text" id="marks" name="marks" required/>
+</label>
+    <button onClick="getDivision()">Division</button>
+</div>
+
+<div>  
+        <label for="country">Enter your gender
+    <input type="text" id="country" name="country" required/>
+</label>
+    <button onClick="getCountry()">Enter your Country</button>
+</div>
+
+    
+</body>
+</html>
